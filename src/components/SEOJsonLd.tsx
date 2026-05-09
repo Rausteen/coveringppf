@@ -38,7 +38,6 @@ export function LocalBusinessJsonLd() {
       { "@type": "Offer", name: "PPF — Film de protection carrosserie" },
       { "@type": "Offer", name: "Covering automobile" },
       { "@type": "Offer", name: "Marquage publicitaire véhicule" },
-      { "@type": "Offer", name: "Vitrophanie" },
     ],
   };
   return (

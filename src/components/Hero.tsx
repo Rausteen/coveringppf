@@ -37,8 +37,8 @@ export function Hero() {
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/75">
               Protégez, personnalisez ou transformez votre véhicule avec une pose professionnelle de
               <span className="text-white"> film PPF</span>,
-              <span className="text-white"> covering</span>,
-              marquage publicitaire et vitrophanie. Pose soignée, finition premium, conseil personnalisé.
+              <span className="text-white"> covering</span>
+              {" "}et marquage publicitaire véhicule. Pose soignée, finition premium, conseil personnalisé.
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-3">

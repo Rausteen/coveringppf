@@ -5,7 +5,6 @@ const SERVICES = [
   { href: "/ppf-strasbourg", label: "PPF Strasbourg" },
   { href: "/covering-strasbourg", label: "Covering Strasbourg" },
   { href: "/marquage-publicitaire-vehicule", label: "Marquage publicitaire véhicule" },
-  { href: "/vitrophanie", label: "Vitrophanie Strasbourg" },
 ];
 
 const PAGES = [
@@ -30,7 +29,7 @@ export function Footer() {
             </span>
           </div>
           <p className="mt-4 text-sm text-muted">
-            Spécialiste {siteConfig.mainServices.slice(0, 2).join(" & ").toLowerCase()}, marquage publicitaire et vitrophanie à {siteConfig.city} et alentours.
+            Spécialiste {siteConfig.mainServices.slice(0, 2).join(" & ").toLowerCase()} et marquage publicitaire véhicule à {siteConfig.city} et alentours.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             <Link href={buildWhatsAppUrl()} target="_blank" rel="noopener" className="chip hover:border-accent/40 hover:text-white" data-conversion-action="whatsapp_click" data-cta-location="footer">
@@ -81,7 +80,7 @@ export function Footer() {
       <div className="border-t border-white/5">
         <div className="container-edge flex flex-col items-start justify-between gap-3 py-6 text-xs text-white/45 sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} {siteConfig.legalName}. Tous droits réservés.</p>
-          <p>PPF · Covering · Marquage · Vitrophanie · {siteConfig.city} · {siteConfig.region}</p>
+          <p>PPF · Covering · Marquage publicitaire · {siteConfig.city} · {siteConfig.region}</p>
         </div>
       </div>
     </footer>

@@ -6,7 +6,6 @@ const routes = [
   "/ppf-strasbourg",
   "/covering-strasbourg",
   "/marquage-publicitaire-vehicule",
-  "/vitrophanie",
   "/realisations",
   "/contact",
   "/mentions-legales",

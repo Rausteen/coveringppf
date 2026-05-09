@@ -13,7 +13,7 @@ const ARGS = [
   },
   {
     t: "Films & matériaux sélectionnés",
-    d: "Sélection de films qualitatifs et adaptés à chaque usage : protection, esthétique, marquage publicitaire, vitrophanie.",
+    d: "Sélection de films qualitatifs et adaptés à chaque usage : protection, esthétique, marquage publicitaire véhicule.",
   },
   {
     t: "Solutions sur-mesure",
@@ -29,7 +29,7 @@ const ARGS = [
   },
   {
     t: "Particuliers & professionnels",
-    d: "Voitures personnelles, sportives, premium, utilitaires d’artisans, flottes d’entreprise, vitrines de commerces.",
+    d: "Voitures personnelles, sportives, premium, utilitaires d’artisans, flottes d’entreprise.",
   },
   {
     t: "Confidentialité & soin",

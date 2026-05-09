@@ -1,6 +1,6 @@
 import { ServiceCard } from "./ServiceCard";
 import { SectionHeader } from "./SectionHeader";
-import { CarIcon, MegaphoneIcon, ShieldIcon, SparkIcon, WindowIcon } from "./icons";
+import { CarIcon, MegaphoneIcon, ShieldIcon, SparkIcon } from "./icons";
 
 export function ServicesGrid() {
   return (
@@ -9,10 +9,10 @@ export function ServicesGrid() {
         <SectionHeader
           eyebrow="Nos prestations"
           title="Protéger, transformer, signer votre véhicule."
-          subtitle="Quatre expertises, une même exigence : pose soignée, finition propre, conseil sur-mesure."
+          subtitle="Trois expertises, une même exigence : pose soignée, finition propre, conseil sur-mesure."
         />
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           <ServiceCard
             badge="Best-seller"
             highlighted
@@ -53,19 +53,6 @@ export function ServicesGrid() {
             ]}
             cta={{ label: "Créer mon marquage", service: "Marquage", ctaLocation: "services_marquage" }}
             href="/marquage-publicitaire-vehicule"
-          />
-          <ServiceCard
-            icon={<WindowIcon className="h-5 w-5" />}
-            title="Vitrophanie"
-            intro="Habillez vitrines, façades et bureaux : signalétique, décoration, confidentialité."
-            bullets={[
-              "Habillage de vitrines & façades",
-              "Effet dépoli pour la confidentialité",
-              "Décoration & signalétique premium",
-              "Locaux commerciaux et professionnels",
-            ]}
-            cta={{ label: "Demander une vitrophanie", service: "Vitrophanie", ctaLocation: "services_vitrophanie" }}
-            href="/vitrophanie"
           />
         </div>
 

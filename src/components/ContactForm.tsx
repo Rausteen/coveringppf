@@ -5,7 +5,7 @@ import Link from "next/link";
 import { buildWhatsAppUrl, type WhatsAppService } from "@/config/site";
 import { WhatsAppIcon } from "./icons";
 
-const SERVICES: WhatsAppService[] = ["PPF", "Covering", "Marquage", "Vitrophanie"];
+const SERVICES: WhatsAppService[] = ["PPF", "Covering", "Marquage"];
 
 export function ContactForm() {
   const [name, setName] = useState("");

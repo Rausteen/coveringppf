@@ -11,7 +11,7 @@ import { PinIcon } from "@/components/icons";
 export const metadata: Metadata = {
   title: "Contact / Devis — PPF, covering & marquage à Strasbourg",
   description:
-    "Demandez un devis rapide pour une pose de PPF, un covering, un marquage publicitaire ou une vitrophanie à Strasbourg. WhatsApp et téléphone privilégiés.",
+    "Demandez un devis rapide pour une pose de PPF, un covering ou un marquage publicitaire véhicule à Strasbourg. WhatsApp et téléphone privilégiés.",
   alternates: { canonical: "/contact" },
 };
 

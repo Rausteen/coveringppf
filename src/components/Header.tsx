@@ -9,7 +9,6 @@ const NAV = [
   { href: "/ppf-strasbourg", label: "PPF" },
   { href: "/covering-strasbourg", label: "Covering" },
   { href: "/marquage-publicitaire-vehicule", label: "Marquage" },
-  { href: "/vitrophanie", label: "Vitrophanie" },
   { href: "/realisations", label: "Réalisations" },
   { href: "/contact", label: "Contact" },
 ];

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | " + siteConfig.businessName,
   },
   description:
-    "Spécialiste PPF, covering automobile, marquage publicitaire et vitrophanie à Strasbourg. Devis rapide par WhatsApp pour protéger ou personnaliser votre véhicule.",
+    "Spécialiste PPF, covering automobile et marquage publicitaire véhicule à Strasbourg. Devis rapide par WhatsApp.",
   applicationName: siteConfig.businessName,
   keywords: [
     "PPF Strasbourg",
@@ -22,7 +22,6 @@ export const metadata: Metadata = {
     "covering voiture Strasbourg",
     "covering auto Strasbourg",
     "marquage publicitaire véhicule Strasbourg",
-    "vitrophanie Strasbourg",
     "protection carrosserie voiture Strasbourg",
     "PPF Alsace",
     "covering Alsace",
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.businessName,
     title: "PPF & Covering à Strasbourg | Protection carrosserie & covering auto",
     description:
-      "Spécialiste PPF, covering automobile, marquage publicitaire et vitrophanie à Strasbourg. Devis rapide par WhatsApp.",
+      "Spécialiste PPF, covering automobile et marquage publicitaire véhicule à Strasbourg. Devis rapide par WhatsApp.",
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: siteConfig.businessName }],
   },
   twitter: {

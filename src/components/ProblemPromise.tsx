@@ -6,7 +6,7 @@ const PROBLEMS = [
   { t: "Traces de lavage", d: "Brosses agressives, mauvais produits, finition ternie." },
   { t: "Look qui lasse", d: "Envie de changer la couleur sans repeindre — réversible." },
   { t: "Visibilité pro", d: "Véhicule utilitaire ou flotte sans identité visuelle." },
-  { t: "Vitrines nues", d: "Boutique peu visible, manque de signalétique premium." },
+  { t: "Valeur de revente", d: "Carrosserie marquée = décote au moment de revendre." },
 ];
 
 const PROMISES = [

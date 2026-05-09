@@ -118,22 +118,6 @@ export const HOME_FAQ: FAQItem[] = [
     ),
   },
   {
-    q: "La vitrophanie est-elle adaptée aux vitrines de magasin ?",
-    a: (
-      <>
-        Oui — c’est l’un de ses usages principaux. Habillage de vitrines, signalétique, décoration, mise en avant de promotions, ou effet dépoli pour la confidentialité.
-      </>
-    ),
-  },
-  {
-    q: "Peut-on garder de la confidentialité avec une vitrophanie ?",
-    a: (
-      <>
-        Oui. Les films dépolis (effet sablé) laissent passer la lumière tout en masquant la vue. Idéal pour bureaux, cabinets et espaces de réunion.
-      </>
-    ),
-  },
-  {
     q: "Comment obtenir un devis rapidement ?",
     a: (
       <>

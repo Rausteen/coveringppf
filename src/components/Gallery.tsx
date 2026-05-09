@@ -17,7 +17,7 @@ const ITEMS: Item[] = [
   { type: "Covering complet mat", project: "Tesla Model 3", place: "Schiltigheim", hue: "from-zinc-500/25 to-zinc-950", href: "/covering-strasbourg" },
   { type: "Chrome delete", project: "BMW M3 Competition", place: "Illkirch", hue: "from-slate-500/25 to-black", href: "/covering-strasbourg" },
   { type: "Marquage utilitaire", project: "Renault Trafic — artisan", place: "Lingolsheim", hue: "from-blue-500/25 to-slate-900", href: "/marquage-publicitaire-vehicule" },
-  { type: "Vitrophanie magasin", project: "Boutique centre-ville", place: "Strasbourg", hue: "from-emerald-400/25 to-slate-950", href: "/vitrophanie" },
+  { type: "Covering toit noir", project: "Mercedes Classe A", place: "Ostwald", hue: "from-zinc-400/20 to-black", href: "/covering-strasbourg" },
   { type: "PPF intégral", project: "Audi RS6", place: "Bischheim", hue: "from-cyan-400/25 to-slate-900", href: "/ppf-strasbourg" },
 ];
 
@@ -30,7 +30,7 @@ export function Gallery({ compact = false }: { compact?: boolean }) {
           <SectionHeader
             eyebrow="Réalisations"
             title="Quelques projets PPF, covering & marquage."
-            subtitle="Particuliers, sportives, premium, utilitaires, vitrines — chaque projet est traité avec la même exigence."
+            subtitle="Particuliers, sportives, premium, utilitaires d’artisans — chaque projet est traité avec la même exigence."
           />
           <Link href="/realisations" className="btn-secondary self-start text-sm">
             Voir toutes les réalisations

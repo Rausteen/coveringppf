@@ -63,7 +63,7 @@ export const siteConfig = {
   ],
 
   // -------- Services principaux (ordre = ordre d’affichage) --------
-  mainServices: ["PPF", "Covering", "Marquage publicitaire", "Vitrophanie"],
+  mainServices: ["PPF", "Covering", "Marquage publicitaire"],
 
   // -------- Placeholders crédibilité (NE PAS afficher si vide) --------
   // Remplir uniquement si l’info est réelle. Sinon laisser vide.
@@ -82,7 +82,6 @@ export type WhatsAppService =
   | "PPF"
   | "Covering"
   | "Marquage"
-  | "Vitrophanie"
   | "Devis";
 
 export function buildWhatsAppUrl(service: WhatsAppService = "Devis", note?: string) {

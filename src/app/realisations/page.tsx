@@ -9,7 +9,7 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "Réalisations PPF, covering & marquage à Strasbourg",
   description:
-    "Galerie de réalisations PPF, covering, chrome delete, marquage publicitaire et vitrophanie à Strasbourg et alentours.",
+    "Galerie de réalisations PPF, covering, chrome delete et marquage publicitaire véhicule à Strasbourg et alentours.",
   alternates: { canonical: "/realisations" },
 };
 
@@ -27,7 +27,7 @@ export default function RealisationsPage() {
             <SectionHeader
               eyebrow="Réalisations"
               title="PPF, covering & marquage — quelques projets."
-              subtitle="Particuliers, sportives, premium, utilitaires d’artisans, vitrines de commerces. Chaque projet est traité avec la même exigence de finition."
+              subtitle="Particuliers, sportives, premium, utilitaires d’artisans, flottes d’entreprise. Chaque projet est traité avec la même exigence de finition."
             />
           </div>
           <div className="mt-12 divider-soft" />
