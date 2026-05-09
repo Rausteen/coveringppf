@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { CallButton } from "./CallButton";
@@ -23,20 +22,8 @@ export function FinalCTA() {
             Envoyez-nous votre véhicule, votre idée et quelques photos. Nous revenons vers vous rapidement avec une solution adaptée — protection, esthétique, visibilité ou personnalisation.
           </p>
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-            <WhatsAppButton ctaLocation="final_cta" label="Demander un devis sur WhatsApp" />
+            <WhatsAppButton ctaLocation="final_cta" label="Obtenir mon devis sur WhatsApp" />
             <CallButton ctaLocation="final_cta" label="Appeler" showNumber />
-            {siteConfig.googleMapsUrl && (
-              <Link
-                href={siteConfig.googleMapsUrl}
-                target="_blank"
-                rel="noopener"
-                className="btn-ghost text-sm"
-                data-conversion-action="maps_click"
-                data-cta-location="final_cta"
-              >
-                Itinéraire Google Maps
-              </Link>
-            )}
           </div>
         </Reveal>
 

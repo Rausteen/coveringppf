@@ -5,6 +5,9 @@ const SERVICES = [
   { href: "/ppf-strasbourg", label: "PPF Strasbourg" },
   { href: "/covering-strasbourg", label: "Covering Strasbourg" },
   { href: "/marquage-publicitaire-vehicule", label: "Marquage publicitaire véhicule" },
+  { href: "/prix-ppf-strasbourg", label: "Prix PPF Strasbourg" },
+  { href: "/prix-covering-strasbourg", label: "Prix covering Strasbourg" },
+  { href: "/ppf-vs-covering", label: "PPF ou covering : guide" },
 ];
 
 const PAGES = [

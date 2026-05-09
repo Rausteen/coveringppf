@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { TrustBar } from "@/components/TrustBar";
 import { Footer } from "@/components/Footer";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { LocalBusinessJsonLd } from "@/components/SEOJsonLd";
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Aller au contenu
         </a>
+        <TrustBar />
         <Header />
         <main id="main" className="pb-24 lg:pb-0">{children}</main>
         <Footer />

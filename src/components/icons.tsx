@@ -95,6 +95,47 @@ export function ChevronDownIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function DropletIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+      <path d="M12 2.5s6 7 6 11.5a6 6 0 1 1-12 0c0-4.5 6-11.5 6-11.5Z" />
+    </svg>
+  );
+}
+
+export function ScratchIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+      <path d="M3 18 21 6" />
+      <path d="M5 21 22 9" />
+      <path d="M2 14 14 4" />
+    </svg>
+  );
+}
+
+export function PaletteIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+      <path d="M12 22a10 10 0 1 1 9.6-12.7c.5 1.7-.9 3.2-2.6 3.2H17a2 2 0 0 0-2 2v.5a2 2 0 0 1-2 2h-1Z" />
+      <circle cx="7.5" cy="11" r="1" />
+      <circle cx="9" cy="6.5" r="1" />
+      <circle cx="13.5" cy="6" r="1" />
+      <circle cx="17.5" cy="9" r="1" />
+    </svg>
+  );
+}
+
+export function CoinsIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+      <ellipse cx="9" cy="7" rx="6" ry="2.5" />
+      <path d="M3 7v6c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V7" />
+      <path d="M21 11c0 1.4-2.7 2.5-6 2.5" />
+      <path d="M21 11v6c0 1.4-2.7 2.5-6 2.5s-6-1.1-6-2.5v-1" />
+    </svg>
+  );
+}
+
 export function StarIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>

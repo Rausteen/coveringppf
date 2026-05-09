@@ -6,17 +6,17 @@ import { CheckIcon, PinIcon } from "./icons";
 import { Reveal } from "./Reveal";
 
 const RASSURANCES = [
-  "Devis rapide",
-  "Réponse par WhatsApp",
+  "Devis sous 30 min",
+  "Réponse WhatsApp directe",
   `${siteConfig.city} & alentours`,
-  "Finitions premium",
+  "Sans engagement",
 ];
 
 const STATS = [
-  { v: "PPF", k: "Film de protection" },
-  { v: "Covering", k: "Total ou partiel" },
+  { v: "30 min", k: "Réponse moyenne sur WhatsApp" },
+  { v: "0 €", k: "Devis & sans engagement" },
   { v: "67", k: `${siteConfig.region} · ${siteConfig.department}` },
-  { v: "WhatsApp", k: "Devis en quelques minutes" },
+  { v: "Pose pro", k: "Bords nets, finition durable" },
 ];
 
 export function Hero() {
@@ -50,17 +50,18 @@ export function Hero() {
 
             <Reveal variant="up" delay={160}>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 lg:text-xl">
-                Protégez, personnalisez ou transformez votre véhicule avec une pose professionnelle de
+                Protégez la valeur de votre véhicule ou changez son look — pose professionnelle de
                 <span className="text-white"> film PPF</span>,
-                <span className="text-white"> covering</span>
-                {" "}et marquage publicitaire véhicule. Pose soignée, finition premium, conseil personnalisé.
+                <span className="text-white"> covering</span> et marquage publicitaire véhicule.
+                <strong className="text-white"> Devis gratuit sous 30 minutes</strong> par WhatsApp,
+                photos suffisent.
               </p>
             </Reveal>
 
             <Reveal variant="up" delay={240}>
               <div className="mt-8 flex flex-wrap items-center gap-3">
-                <WhatsAppButton ctaLocation="hero" label="Demander un devis sur WhatsApp" />
-                <CallButton ctaLocation="hero" label="Appeler maintenant" showNumber />
+                <WhatsAppButton ctaLocation="hero" label="Devis gratuit sur WhatsApp" />
+                <CallButton ctaLocation="hero" label="Appeler" showNumber />
               </div>
             </Reveal>
 

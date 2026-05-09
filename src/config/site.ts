@@ -10,12 +10,12 @@ export const siteConfig = {
   tagline: "PPF & covering automobile premium à Strasbourg",
   domain: "https://www.coveringppf-strasbourg.fr", // remplacer par le domaine final
 
-  // -------- Contact (à remplacer) --------
-  // Format E.164 sans espaces pour WhatsApp (ex: 33612345678)
-  whatsappNumber: "33600000000",
-  // Numéro affiché et tel: (FR)
-  phoneNumber: "+33 6 00 00 00 00",
-  phoneNumberE164: "+33600000000",
+  // -------- Contact --------
+  // Format E.164 sans espaces ni + pour WhatsApp (wa.me/<numéro>)
+  whatsappNumber: "33767052435",
+  // Numéro affiché (espacé) et tel: (E.164)
+  phoneNumber: "+33 7 67 05 24 35",
+  phoneNumberE164: "+33767052435",
   email: "contact@coveringppf-strasbourg.fr",
 
   // -------- Localisation --------

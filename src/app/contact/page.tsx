@@ -43,15 +43,8 @@ export default function ContactPage() {
                 {siteConfig.email && (
                   <InfoCard label="Email" value={siteConfig.email} href={`mailto:${siteConfig.email}`} />
                 )}
-                <InfoCard
-                  label="Adresse"
-                  value={`${siteConfig.address.street}, ${siteConfig.address.postalCode} ${siteConfig.address.city}`}
-                  href={siteConfig.googleMapsUrl}
-                  target="_blank"
-                  icon
-                />
                 <InfoCard label="Horaires" value={siteConfig.openingHours} />
-                <InfoCard label="Zone d’intervention" value={siteConfig.serviceAreas.slice(0, 6).join(" · ") + " · …"} />
+                <InfoCard label="Zone d’intervention" value={siteConfig.serviceAreas.slice(0, 6).join(" · ") + " · …"} icon />
               </div>
             </div>
             <div className="lg:col-span-5">
