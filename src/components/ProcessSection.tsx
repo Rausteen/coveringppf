@@ -38,22 +38,13 @@ export function ProcessSection() {
         </Reveal>
 
         <div className="relative mt-14">
-          {/* Connecting line on desktop */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute left-0 right-0 top-12 hidden h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent xl:block"
-          />
-
           <ol className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {STEPS.map((s, i) => (
               <Reveal key={s.n} delay={i * 90}>
                 <li className="group relative flex h-full flex-col rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30">
-                  <div className="flex items-center gap-3">
-                    <span className="font-display text-3xl font-semibold text-accent transition-transform duration-300 group-hover:scale-110">
-                      {s.n}
-                    </span>
-                    <span className="hidden h-px flex-1 bg-gradient-to-r from-accent/30 to-transparent xl:block" />
-                  </div>
+                  <span className="font-display text-3xl font-semibold text-accent transition-transform duration-300 group-hover:scale-110">
+                    {s.n}
+                  </span>
                   <h3 className="mt-3 text-base font-semibold text-white">{s.t}</h3>
                   <p className="mt-2 text-sm text-muted">{s.d}</p>
                 </li>
