@@ -4,13 +4,14 @@ import { WhatsAppButton } from "./WhatsAppButton";
 import { CallButton } from "./CallButton";
 import { PinIcon } from "./icons";
 import { ContactForm } from "./ContactForm";
+import { Reveal } from "./Reveal";
 
 export function FinalCTA() {
   return (
     <section id="contact" className="relative overflow-hidden border-t border-white/5 bg-ink-900 py-20 sm:py-24">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(16,185,129,0.10),transparent_60%)]" />
       <div className="container-edge relative">
-        <div className="mx-auto max-w-3xl text-center">
+        <Reveal className="mx-auto max-w-3xl text-center">
           <span className="chip">
             <PinIcon className="h-3.5 w-3.5 text-accent" />
             {siteConfig.city} · {siteConfig.region}
@@ -37,11 +38,11 @@ export function FinalCTA() {
               </Link>
             )}
           </div>
-        </div>
+        </Reveal>
 
-        <div className="mx-auto mt-14 max-w-3xl">
+        <Reveal delay={150} className="mx-auto mt-14 max-w-3xl">
           <ContactForm />
-        </div>
+        </Reveal>
       </div>
     </section>
   );

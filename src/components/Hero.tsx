@@ -3,6 +3,7 @@ import { siteConfig } from "@/config/site";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { CallButton } from "./CallButton";
 import { CheckIcon, PinIcon } from "./icons";
+import { Reveal } from "./Reveal";
 
 const RASSURANCES = [
   "Devis rapide",
@@ -11,56 +12,74 @@ const RASSURANCES = [
   "Finitions premium",
 ];
 
+const STATS = [
+  { v: "PPF", k: "Film de protection" },
+  { v: "Covering", k: "Total ou partiel" },
+  { v: "67", k: `${siteConfig.region} · ${siteConfig.department}` },
+  { v: "WhatsApp", k: "Devis en quelques minutes" },
+];
+
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-ink-950 pt-10 sm:pt-14">
+    <section className="relative overflow-hidden bg-ink-950 pt-10 sm:pt-14 lg:pt-20">
       {/* Background layers */}
       <div className="pointer-events-none absolute inset-0 grid-bg opacity-[0.35] mask-fade-b" />
       <div className="pointer-events-none absolute inset-0 bg-hero-glow" />
-      <div className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-accent/10 blur-3xl" />
+      <div className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-accent/10 blur-3xl animate-pulse-slow" />
+      <div className="pointer-events-none absolute -bottom-32 right-0 h-[480px] w-[480px] rounded-full bg-electric/10 blur-3xl" />
 
       <div className="container-edge relative">
-        <div className="grid items-center gap-12 lg:grid-cols-12">
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
-            <span className="chip">
-              <PinIcon className="h-3.5 w-3.5 text-accent" />
-              PPF & covering automobile à {siteConfig.city}
-            </span>
-
-            <h1 className="heading-display mt-5 text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
-              <span className="text-white">PPF & covering </span>
-              <span className="bg-gradient-to-r from-accent-soft via-accent to-accent-deep bg-clip-text text-transparent">
-                premium
+            <Reveal variant="up">
+              <span className="chip">
+                <PinIcon className="h-3.5 w-3.5 text-accent" />
+                PPF & covering automobile à {siteConfig.city}
               </span>
-              <span className="text-white"> à {siteConfig.city}.</span>
-            </h1>
+            </Reveal>
 
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/75">
-              Protégez, personnalisez ou transformez votre véhicule avec une pose professionnelle de
-              <span className="text-white"> film PPF</span>,
-              <span className="text-white"> covering</span>
-              {" "}et marquage publicitaire véhicule. Pose soignée, finition premium, conseil personnalisé.
-            </p>
+            <Reveal variant="up" delay={80}>
+              <h1 className="heading-display mt-5 text-4xl leading-[1.05] sm:text-5xl lg:text-7xl xl:text-[5.25rem]">
+                <span className="text-white">PPF & covering </span>
+                <span className="bg-gradient-to-r from-accent-soft via-accent to-accent-deep bg-clip-text text-transparent">
+                  premium
+                </span>
+                <span className="text-white"> à {siteConfig.city}.</span>
+              </h1>
+            </Reveal>
 
-            <div className="mt-7 flex flex-wrap items-center gap-3">
-              <WhatsAppButton ctaLocation="hero" label="Demander un devis sur WhatsApp" />
-              <CallButton ctaLocation="hero" label="Appeler maintenant" showNumber />
-            </div>
+            <Reveal variant="up" delay={160}>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 lg:text-xl">
+                Protégez, personnalisez ou transformez votre véhicule avec une pose professionnelle de
+                <span className="text-white"> film PPF</span>,
+                <span className="text-white"> covering</span>
+                {" "}et marquage publicitaire véhicule. Pose soignée, finition premium, conseil personnalisé.
+              </p>
+            </Reveal>
 
-            <ul className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/70">
-              {RASSURANCES.map((r) => (
-                <li key={r} className="inline-flex items-center gap-2">
-                  <CheckIcon className="h-4 w-4 text-accent" />
-                  {r}
-                </li>
-              ))}
-            </ul>
+            <Reveal variant="up" delay={240}>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <WhatsAppButton ctaLocation="hero" label="Demander un devis sur WhatsApp" />
+                <CallButton ctaLocation="hero" label="Appeler maintenant" showNumber />
+              </div>
+            </Reveal>
+
+            <Reveal variant="up" delay={320}>
+              <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/70">
+                {RASSURANCES.map((r) => (
+                  <li key={r} className="inline-flex items-center gap-2">
+                    <CheckIcon className="h-4 w-4 text-accent" />
+                    {r}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
           </div>
 
           {/* Visual */}
-          <div className="lg:col-span-5">
+          <Reveal variant="scale" delay={120} className="lg:col-span-5">
             <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-              <div className="absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-accent/40 via-electric/20 to-transparent opacity-40 blur-2xl" />
+              <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-accent/40 via-electric/25 to-transparent opacity-40 blur-2xl animate-pulse-slow" />
               <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-ink-900 shadow-card">
                 <div className="relative aspect-[4/5] w-full">
                   <Image
@@ -88,8 +107,20 @@ export function Hero() {
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
+
+        {/* Stats strip — desktop accent */}
+        <Reveal variant="up" delay={400}>
+          <div className="mt-14 hidden grid-cols-4 divide-x divide-white/5 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm lg:mt-20 lg:grid">
+            {STATS.map((s) => (
+              <div key={s.k} className="px-6 py-5">
+                <div className="font-display text-xl font-semibold text-white">{s.v}</div>
+                <div className="mt-1 text-xs uppercase tracking-wider text-white/55">{s.k}</div>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
 
       <div className="container-edge mt-16">

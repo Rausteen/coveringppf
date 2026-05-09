@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDownIcon } from "./icons";
+import { Reveal } from "./Reveal";
 
 export type FAQItem = { q: string; a: React.ReactNode };
 
@@ -10,7 +11,7 @@ export function FAQ({ items, title, subtitle }: { items: FAQItem[]; title?: stri
     <section id="faq" className="py-20 sm:py-24">
       <div className="container-edge">
         <div className="grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+          <Reveal variant="left" className="lg:col-span-5">
             <span className="chip">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
               FAQ
@@ -19,14 +20,14 @@ export function FAQ({ items, title, subtitle }: { items: FAQItem[]; title?: stri
               {title || "Vos questions, nos réponses."}
             </h2>
             {subtitle && <p className="mt-4 text-muted">{subtitle}</p>}
-          </div>
-          <div className="lg:col-span-7">
+          </Reveal>
+          <Reveal variant="right" delay={120} className="lg:col-span-7">
             <div className="divide-y divide-white/5 overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02]">
               {items.map((it, i) => (
                 <FAQRow key={i} item={it} defaultOpen={i === 0} />
               ))}
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SectionHeader } from "./SectionHeader";
 import { ArrowIcon } from "./icons";
 import { buildWhatsAppUrl } from "@/config/site";
+import { Reveal } from "./Reveal";
 
 type Item = {
   type: string;
@@ -69,24 +70,26 @@ export function Gallery({ compact = false }: { compact?: boolean }) {
   return (
     <section id="realisations" className="py-20 sm:py-24">
       <div className="container-edge">
-        <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
-          <SectionHeader
-            eyebrow="Réalisations"
-            title="Quelques projets PPF, covering & marquage."
-            subtitle="Particuliers, sportives, premium, utilitaires d’artisans — chaque projet est traité avec la même exigence."
-          />
-          <Link href="/realisations" className="btn-secondary self-start text-sm">
-            Voir toutes les réalisations
-            <ArrowIcon className="h-4 w-4" />
-          </Link>
-        </div>
+        <Reveal>
+          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+            <SectionHeader
+              eyebrow="Réalisations"
+              title="Quelques projets PPF, covering & marquage."
+              subtitle="Particuliers, sportives, premium, utilitaires d’artisans — chaque projet est traité avec la même exigence."
+            />
+            <Link href="/realisations" className="btn-secondary group/cta self-start text-sm">
+              Voir toutes les réalisations
+              <ArrowIcon className="h-4 w-4 transition group-hover/cta:translate-x-0.5" />
+            </Link>
+          </div>
+        </Reveal>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item, i) => (
-            <article
-              key={`${item.type}-${i}`}
-              className="group overflow-hidden rounded-2xl border border-white/[0.08] bg-ink-900"
-            >
+            <Reveal key={`${item.type}-${i}`} delay={i * 70}>
+              <article
+                className="group overflow-hidden rounded-2xl border border-white/[0.08] bg-ink-900 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-card"
+              >
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-ink-900">
                 <Image
                   src={item.image}
@@ -94,7 +97,7 @@ export function Gallery({ compact = false }: { compact?: boolean }) {
                   fill
                   loading="lazy"
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover transition duration-500 group-hover:scale-105"
+                  className="object-cover transition duration-700 group-hover:scale-110"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
                 <span className="absolute left-3 top-3 chip">{item.type}</span>
@@ -113,7 +116,8 @@ export function Gallery({ compact = false }: { compact?: boolean }) {
                   Voir →
                 </Link>
               </div>
-            </article>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>

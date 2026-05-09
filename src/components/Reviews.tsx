@@ -1,5 +1,6 @@
 import { SectionHeader } from "./SectionHeader";
 import { StarIcon } from "./icons";
+import { Reveal } from "./Reveal";
 
 // =============================================================================
 // AVIS CLIENTS — placeholders.
@@ -21,11 +22,13 @@ export function Reviews() {
   return (
     <section className="py-20 sm:py-24">
       <div className="container-edge">
-        <SectionHeader
-          eyebrow="Avis clients"
-          title="Ce que disent nos clients."
-          subtitle="Ajoutez ici vos avis Google pour renforcer la confiance dès la première visite."
-        />
+        <Reveal>
+          <SectionHeader
+            eyebrow="Avis clients"
+            title="Ce que disent nos clients."
+            subtitle="Ajoutez ici vos avis Google pour renforcer la confiance dès la première visite."
+          />
+        </Reveal>
 
         {reviews.length === 0 ? (
           <div className="mt-12 grid gap-4 md:grid-cols-3">

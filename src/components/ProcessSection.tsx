@@ -1,5 +1,6 @@
 import { SectionHeader } from "./SectionHeader";
 import { WhatsAppButton } from "./WhatsAppButton";
+import { Reveal } from "./Reveal";
 
 const STEPS = [
   {
@@ -28,28 +29,44 @@ export function ProcessSection() {
   return (
     <section id="process" className="py-20 sm:py-24">
       <div className="container-edge">
-        <SectionHeader
-          eyebrow="Process simple"
-          title="De la demande à la pose : 4 étapes."
-          subtitle="Pas de prise de tête, pas de devis interminable. Vous écrivez sur WhatsApp, on s’occupe du reste."
-        />
+        <Reveal>
+          <SectionHeader
+            eyebrow="Process simple"
+            title="De la demande à la pose : 4 étapes."
+            subtitle="Pas de prise de tête, pas de devis interminable. Vous écrivez sur WhatsApp, on s’occupe du reste."
+          />
+        </Reveal>
 
-        <ol className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {STEPS.map((s) => (
-            <li
-              key={s.n}
-              className="relative rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-6"
-            >
-              <div className="font-display text-3xl font-semibold text-accent">{s.n}</div>
-              <h3 className="mt-3 text-base font-semibold text-white">{s.t}</h3>
-              <p className="mt-2 text-sm text-muted">{s.d}</p>
-            </li>
-          ))}
-        </ol>
+        <div className="relative mt-14">
+          {/* Connecting line on desktop */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-0 right-0 top-12 hidden h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent xl:block"
+          />
 
-        <div className="mt-10 flex justify-center">
-          <WhatsAppButton ctaLocation="process" label="Démarrer ma demande sur WhatsApp" />
+          <ol className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {STEPS.map((s, i) => (
+              <Reveal key={s.n} delay={i * 90}>
+                <li className="group relative flex h-full flex-col rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30">
+                  <div className="flex items-center gap-3">
+                    <span className="font-display text-3xl font-semibold text-accent transition-transform duration-300 group-hover:scale-110">
+                      {s.n}
+                    </span>
+                    <span className="hidden h-px flex-1 bg-gradient-to-r from-accent/30 to-transparent xl:block" />
+                  </div>
+                  <h3 className="mt-3 text-base font-semibold text-white">{s.t}</h3>
+                  <p className="mt-2 text-sm text-muted">{s.d}</p>
+                </li>
+              </Reveal>
+            ))}
+          </ol>
         </div>
+
+        <Reveal delay={200}>
+          <div className="mt-12 flex justify-center">
+            <WhatsAppButton ctaLocation="process" label="Démarrer ma demande sur WhatsApp" />
+          </div>
+        </Reveal>
       </div>
     </section>
   );

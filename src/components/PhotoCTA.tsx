@@ -1,11 +1,13 @@
 import { WhatsAppButton } from "./WhatsAppButton";
 import { CallButton } from "./CallButton";
+import { Reveal } from "./Reveal";
 
 export function PhotoCTA() {
   return (
     <section className="py-20 sm:py-24">
       <div className="container-edge">
-        <div className="relative overflow-hidden rounded-3xl border border-accent/20 bg-gradient-to-br from-accent/[0.10] via-ink-900 to-ink-900 p-8 sm:p-12">
+        <Reveal>
+          <div className="relative overflow-hidden rounded-3xl border border-accent/20 bg-gradient-to-br from-accent/[0.10] via-ink-900 to-ink-900 p-8 sm:p-12">
           <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent/15 blur-3xl" />
           <div className="relative grid items-center gap-8 lg:grid-cols-12">
             <div className="lg:col-span-7">
@@ -42,6 +44,7 @@ export function PhotoCTA() {
             </div>
           </div>
         </div>
+        </Reveal>
       </div>
     </section>
   );

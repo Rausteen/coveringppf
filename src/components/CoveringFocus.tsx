@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { WhatsAppButton } from "./WhatsAppButton";
+import { Reveal } from "./Reveal";
 
 const FINISHES = [
   { t: "Mat", d: "Look agressif, profond, très tendance." },
@@ -23,7 +24,7 @@ export function CoveringFocus() {
   return (
     <section className="py-20 sm:py-24">
       <div className="container-edge grid gap-12 lg:grid-cols-12">
-        <div className="lg:col-span-5">
+        <Reveal variant="left" className="lg:col-span-5">
           <span className="chip">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             Focus covering
@@ -41,9 +42,9 @@ export function CoveringFocus() {
           <div className="mt-7 flex flex-wrap gap-3">
             <WhatsAppButton service="Covering" ctaLocation="covering_focus" label="Devis covering sur WhatsApp" />
           </div>
-        </div>
+        </Reveal>
 
-        <div className="lg:col-span-7">
+        <Reveal variant="right" delay={120} className="lg:col-span-7">
           <div className="relative mb-5 overflow-hidden rounded-2xl border border-white/10 bg-ink-950">
             <div className="relative aspect-[16/9] w-full">
               <Image
@@ -86,7 +87,7 @@ export function CoveringFocus() {
               </ul>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

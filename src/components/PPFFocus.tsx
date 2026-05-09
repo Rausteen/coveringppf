@@ -2,6 +2,7 @@ import Image from "next/image";
 import { CheckIcon } from "./icons";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { siteConfig } from "@/config/site";
+import { Reveal } from "./Reveal";
 
 const ZONES = [
   "Face avant complète",
@@ -26,7 +27,7 @@ export function PPFFocus() {
     <section className="relative overflow-hidden border-y border-white/5 bg-ink-900 py-20 sm:py-24">
       <div className="pointer-events-none absolute -left-20 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-accent/10 blur-3xl" />
       <div className="container-edge relative grid gap-12 lg:grid-cols-12">
-        <div className="lg:col-span-5">
+        <Reveal variant="left" className="lg:col-span-5">
           <span className="chip">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             Focus PPF
@@ -45,9 +46,9 @@ export function PPFFocus() {
           <div className="mt-7 flex flex-wrap gap-3">
             <WhatsAppButton service="PPF" ctaLocation="ppf_focus" label="Devis PPF sur WhatsApp" />
           </div>
-        </div>
+        </Reveal>
 
-        <div className="lg:col-span-7">
+        <Reveal variant="right" delay={120} className="lg:col-span-7">
           <div className="relative mb-5 overflow-hidden rounded-2xl border border-white/10 bg-ink-950">
             <div className="relative aspect-[16/9] w-full">
               <Image
@@ -103,7 +104,7 @@ export function PPFFocus() {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
