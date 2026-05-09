@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { WhatsAppButton } from "./WhatsAppButton";
@@ -13,9 +14,19 @@ type Props = {
   service: WhatsAppService;
   ctaLocation: string;
   primaryLabel?: string;
+  image?: { src: string; alt: string };
 };
 
-export function ServiceHero({ eyebrow, title, subtitle, bullets, service, ctaLocation, primaryLabel }: Props) {
+export function ServiceHero({
+  eyebrow,
+  title,
+  subtitle,
+  bullets,
+  service,
+  ctaLocation,
+  primaryLabel,
+  image,
+}: Props) {
   return (
     <section className="relative overflow-hidden border-b border-white/5 bg-ink-950 pt-12 sm:pt-16">
       <div className="pointer-events-none absolute inset-0 bg-hero-glow" />
@@ -38,6 +49,17 @@ export function ServiceHero({ eyebrow, title, subtitle, bullets, service, ctaLoc
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-white/75">{subtitle}</p>
 
+            {image && (
+              <ul className="mt-6 flex flex-wrap gap-2">
+                {bullets.map((b) => (
+                  <li key={b} className="chip border-white/10 bg-white/[0.04]">
+                    <CheckIcon className="h-3.5 w-3.5 text-accent" />
+                    <span className="text-white/85">{b}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <WhatsAppButton service={service} ctaLocation={ctaLocation} label={primaryLabel || "Demander un devis sur WhatsApp"} />
               <CallButton ctaLocation={ctaLocation} label="Appeler" showNumber />
@@ -45,17 +67,36 @@ export function ServiceHero({ eyebrow, title, subtitle, bullets, service, ctaLoc
           </div>
 
           <div className="lg:col-span-5">
-            <div className="card">
-              <h2 className="text-sm font-semibold text-white">En bref</h2>
-              <ul className="mt-4 space-y-2.5">
-                {bullets.map((b) => (
-                  <li key={b} className="flex items-start gap-2.5 text-sm text-white/85">
-                    <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {image ? (
+              <div className="relative">
+                <div className="absolute -inset-2 rounded-[1.75rem] bg-gradient-to-br from-accent/30 via-electric/15 to-transparent opacity-40 blur-2xl" />
+                <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-ink-900 shadow-card">
+                  <div className="relative aspect-[4/3] w-full">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      priority
+                      sizes="(min-width: 1024px) 40vw, 90vw"
+                      className="object-cover"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="card">
+                <h2 className="text-sm font-semibold text-white">En bref</h2>
+                <ul className="mt-4 space-y-2.5">
+                  {bullets.map((b) => (
+                    <li key={b} className="flex items-start gap-2.5 text-sm text-white/85">
+                      <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
 

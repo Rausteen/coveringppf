@@ -50,6 +50,10 @@ export default function PpfPage() {
         service="PPF"
         ctaLocation="ppf_hero"
         primaryLabel="Devis PPF sur WhatsApp"
+        image={{
+          src: "/ppf-hero.webp",
+          alt: "Pose de PPF sur véhicule premium en atelier à Strasbourg",
+        }}
       />
       <PPFFocus />
       <ProcessSection />

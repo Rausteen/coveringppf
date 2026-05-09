@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CheckIcon } from "./icons";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { siteConfig } from "@/config/site";
@@ -47,6 +48,20 @@ export function PPFFocus() {
         </div>
 
         <div className="lg:col-span-7">
+          <div className="relative mb-5 overflow-hidden rounded-2xl border border-white/10 bg-ink-950">
+            <div className="relative aspect-[16/9] w-full">
+              <Image
+                src="/ppf-application.webp"
+                alt="Pose au squeegee d’un film PPF auto-cicatrisant sur carrosserie"
+                fill
+                loading="lazy"
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="object-cover"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+              <span className="absolute bottom-3 left-3 chip">Pose en atelier</span>
+            </div>
+          </div>
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="card">
               <h3 className="text-base font-semibold text-white">Pour qui ?</h3>

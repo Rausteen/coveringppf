@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SectionHeader } from "./SectionHeader";
 import { ArrowIcon } from "./icons";
@@ -7,18 +8,60 @@ type Item = {
   type: string;
   project: string;
   place?: string;
-  // Couleurs du dégradé placeholder — remplacer par <Image src=... /> quand les visuels seront prêts.
-  hue: string;
+  image: string;
+  alt: string;
   href?: string;
 };
 
 const ITEMS: Item[] = [
-  { type: "PPF face avant", project: "Porsche 911 GT3", place: "Strasbourg", hue: "from-emerald-500/30 to-slate-900", href: "/ppf-strasbourg" },
-  { type: "Covering complet mat", project: "Tesla Model 3", place: "Schiltigheim", hue: "from-zinc-500/25 to-zinc-950", href: "/covering-strasbourg" },
-  { type: "Chrome delete", project: "BMW M3 Competition", place: "Illkirch", hue: "from-slate-500/25 to-black", href: "/covering-strasbourg" },
-  { type: "Marquage utilitaire", project: "Renault Trafic — artisan", place: "Lingolsheim", hue: "from-blue-500/25 to-slate-900", href: "/marquage-publicitaire-vehicule" },
-  { type: "Covering toit noir", project: "Mercedes Classe A", place: "Ostwald", hue: "from-zinc-400/20 to-black", href: "/covering-strasbourg" },
-  { type: "PPF intégral", project: "Audi RS6", place: "Bischheim", hue: "from-cyan-400/25 to-slate-900", href: "/ppf-strasbourg" },
+  {
+    type: "PPF face avant",
+    project: "Porsche 911 GT3",
+    place: "Strasbourg",
+    image: "/ppf-face-avant.webp",
+    alt: "Pose de film PPF sur la face avant d’une Porsche 911 GT3 à Strasbourg",
+    href: "/ppf-strasbourg",
+  },
+  {
+    type: "Covering complet mat",
+    project: "Tesla Model 3",
+    place: "Schiltigheim",
+    image: "/covering-tesla.webp",
+    alt: "Covering complet noir mat sur Tesla Model 3 — atelier Schiltigheim",
+    href: "/covering-strasbourg",
+  },
+  {
+    type: "Chrome delete",
+    project: "BMW M3 Competition",
+    place: "Illkirch",
+    image: "/chrome-delete.webp",
+    alt: "Chrome delete sur BMW M3 Competition — finition noir satiné",
+    href: "/covering-strasbourg",
+  },
+  {
+    type: "Marquage utilitaire",
+    project: "Renault Trafic — artisan",
+    place: "Lingolsheim",
+    image: "/marquage-utilitaire.webp",
+    alt: "Marquage publicitaire véhicule sur Renault Trafic d’artisan à Lingolsheim",
+    href: "/marquage-publicitaire-vehicule",
+  },
+  {
+    type: "Covering toit noir",
+    project: "Mercedes Classe A",
+    place: "Ostwald",
+    image: "/covering-toit-noir.webp",
+    alt: "Covering toit noir brillant sur Mercedes Classe A à Ostwald",
+    href: "/covering-strasbourg",
+  },
+  {
+    type: "PPF intégral",
+    project: "Audi RS6",
+    place: "Bischheim",
+    image: "/ppf-rs6.webp",
+    alt: "PPF intégral (full body) sur Audi RS6 nardo grey — atelier Bischheim",
+    href: "/ppf-strasbourg",
+  },
 ];
 
 export function Gallery({ compact = false }: { compact?: boolean }) {
@@ -44,18 +87,16 @@ export function Gallery({ compact = false }: { compact?: boolean }) {
               key={`${item.type}-${i}`}
               className="group overflow-hidden rounded-2xl border border-white/[0.08] bg-ink-900"
             >
-              <div className={`relative aspect-[4/3] w-full bg-gradient-to-br ${item.hue}`}>
-                {/* Image placeholder — remplacer par <Image fill ... /> */}
-                <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_30%_30%,rgba(255,255,255,0.10),transparent_60%)]" />
-                <svg viewBox="0 0 400 300" className="absolute inset-0 h-full w-full opacity-90" aria-hidden="true">
-                  <path
-                    d="M40 200 Q100 130 200 125 Q300 130 360 200 L370 235 Q370 250 350 250 L50 250 Q30 250 30 235 Z"
-                    fill="rgba(0,0,0,0.55)"
-                    stroke="rgba(255,255,255,0.15)"
-                  />
-                  <ellipse cx="100" cy="252" rx="22" ry="8" fill="#000" opacity="0.6" />
-                  <ellipse cx="300" cy="252" rx="22" ry="8" fill="#000" opacity="0.6" />
-                </svg>
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-ink-900">
+                <Image
+                  src={item.image}
+                  alt={item.alt}
+                  fill
+                  loading="lazy"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
                 <span className="absolute left-3 top-3 chip">{item.type}</span>
               </div>
               <div className="flex items-center justify-between gap-3 px-4 py-4">

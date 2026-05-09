@@ -9,7 +9,7 @@ export function LocalBusinessJsonLd() {
     "@id": `${siteConfig.domain}/#business`,
     name: siteConfig.businessName,
     url: siteConfig.domain,
-    image: `${siteConfig.domain}/og.jpg`,
+    image: `${siteConfig.domain}/og.webp`,
     telephone: siteConfig.phoneNumberE164,
     email: siteConfig.email || undefined,
     priceRange: "€€",

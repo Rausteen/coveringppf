@@ -62,6 +62,10 @@ export default function MarquagePage() {
         service="Marquage"
         ctaLocation="marquage_hero"
         primaryLabel="Créer mon marquage"
+        image={{
+          src: "/marquage-hero.webp",
+          alt: "Marquage publicitaire sur flotte d’utilitaires à Strasbourg",
+        }}
       />
 
       <section className="py-20 sm:py-24">

@@ -50,6 +50,10 @@ export default function CoveringPage() {
         service="Covering"
         ctaLocation="covering_hero"
         primaryLabel="Devis covering sur WhatsApp"
+        image={{
+          src: "/covering-hero.webp",
+          alt: "Covering automobile finition mat satin sur véhicule premium à Strasbourg",
+        }}
       />
       <CoveringFocus />
       <ProcessSection />

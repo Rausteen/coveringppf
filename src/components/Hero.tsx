@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { CallButton } from "./CallButton";
@@ -56,62 +57,22 @@ export function Hero() {
             </ul>
           </div>
 
-          {/* Visual mockup */}
+          {/* Visual */}
           <div className="lg:col-span-5">
             <div className="relative mx-auto w-full max-w-md lg:max-w-none">
               <div className="absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-accent/40 via-electric/20 to-transparent opacity-40 blur-2xl" />
-              <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-b from-ink-800 to-ink-950 shadow-card">
-                {/* Image placeholder — remplacer par <Image src=... /> */}
-                <div
-                  className="relative aspect-[4/5] w-full"
-                  role="img"
-                  aria-label="Véhicule premium avec film PPF posé en atelier"
-                >
-                  <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_50%_30%,rgba(16,185,129,0.18),transparent_60%),radial-gradient(60%_40%_at_70%_80%,rgba(59,130,246,0.18),transparent_60%)]" />
-                  <div
-                    className="absolute inset-0 opacity-90"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0) 35%), radial-gradient(120% 60% at 0% 100%, rgba(0,0,0,0.6), transparent 60%)",
-                    }}
+              <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-ink-900 shadow-card">
+                <div className="relative aspect-[4/5] w-full">
+                  <Image
+                    src="/hero.webp"
+                    alt={`Pose de PPF sur véhicule premium en atelier à ${siteConfig.city}`}
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 40vw, 90vw"
+                    className="object-cover"
                   />
-                  {/* Vehicle silhouette */}
-                  <svg
-                    viewBox="0 0 600 750"
-                    className="absolute inset-0 h-full w-full"
-                    aria-hidden="true"
-                  >
-                    <defs>
-                      <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#0F1521" />
-                        <stop offset="60%" stopColor="#0A0F18" />
-                        <stop offset="100%" stopColor="#05070A" />
-                      </linearGradient>
-                      <linearGradient id="reflect" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stopColor="rgba(255,255,255,0.12)" />
-                        <stop offset="100%" stopColor="rgba(255,255,255,0)" />
-                      </linearGradient>
-                    </defs>
-                    <rect width="600" height="750" fill="url(#bodyGrad)" />
-                    {/* Sleek car shape */}
-                    <g>
-                      <path
-                        d="M80 470 Q160 360 300 350 Q440 360 520 470 L540 540 Q540 580 500 580 L100 580 Q60 580 60 540 Z"
-                        fill="#0B1019"
-                        stroke="rgba(16,185,129,0.35)"
-                        strokeWidth="1.2"
-                      />
-                      <path
-                        d="M150 470 Q230 380 300 380 Q370 380 450 470 Z"
-                        fill="rgba(255,255,255,0.06)"
-                      />
-                      <ellipse cx="160" cy="585" rx="35" ry="14" fill="#000" opacity="0.7" />
-                      <ellipse cx="440" cy="585" rx="35" ry="14" fill="#000" opacity="0.7" />
-                      <path d="M120 540 L480 540" stroke="rgba(16,185,129,0.5)" strokeWidth="1.4" />
-                      <path d="M70 470 Q300 420 530 470" stroke="rgba(255,255,255,0.08)" fill="none" />
-                    </g>
-                    <rect width="600" height="750" fill="url(#reflect)" />
-                  </svg>
+                  {/* Subtle dark overlay for chip readability */}
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/20" />
 
                   {/* Floating chips */}
                   <div className="absolute left-4 top-4 chip">

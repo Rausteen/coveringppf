@@ -5,6 +5,7 @@ import { PPFFocus } from "@/components/PPFFocus";
 import { CoveringFocus } from "@/components/CoveringFocus";
 import { ProcessSection } from "@/components/ProcessSection";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
+import { AtelierShowcase } from "@/components/AtelierShowcase";
 import { Gallery } from "@/components/Gallery";
 import { PhotoCTA } from "@/components/PhotoCTA";
 import { FAQ } from "@/components/FAQ";
@@ -28,6 +29,7 @@ export default function HomePage() {
       <CoveringFocus />
       <ProcessSection />
       <WhyChooseUs />
+      <AtelierShowcase />
       <Gallery />
       <PhotoCTA />
       <FAQ items={HOME_FAQ} />
