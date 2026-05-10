@@ -1,11 +1,20 @@
 import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { TrustBar } from "@/components/TrustBar";
 import { Footer } from "@/components/Footer";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { LocalBusinessJsonLd } from "@/components/SEOJsonLd";
+import { Analytics } from "@/components/Analytics";
 import { siteConfig } from "@/config/site";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
@@ -59,7 +68,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={inter.variable}>
       <body className="min-h-screen antialiased">
         <a
           href="#main"
@@ -73,6 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <MobileStickyCTA />
         <LocalBusinessJsonLd />
+        <Analytics />
       </body>
     </html>
   );

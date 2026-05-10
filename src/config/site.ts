@@ -8,7 +8,8 @@ export const siteConfig = {
   businessName: "Covering PPF Strasbourg",
   legalName: "Covering PPF Strasbourg",
   tagline: "PPF & covering automobile premium à Strasbourg",
-  domain: "https://www.coveringppf-strasbourg.fr", // remplacer par le domaine final
+  // Domaine canonical — pilotable via NEXT_PUBLIC_SITE_URL (voir .env.example).
+  domain: (process.env.NEXT_PUBLIC_SITE_URL || "https://www.coveringppf-strasbourg.fr").replace(/\/$/, ""),
 
   // -------- Contact --------
   // Format E.164 sans espaces ni + pour WhatsApp (wa.me/<numéro>)
@@ -72,6 +73,22 @@ export const siteConfig = {
     vehiclesCount: "", // ex: "500"
     brands: [] as string[], // ex: ["XPEL", "3M", "Avery Dennison", "Hexis"]
     certifications: [] as string[], // ex: ["XPEL Certified Installer"]
+  },
+
+  // -------- Analytics / tracking (laisser vide tant que non configuré) --------
+  // Renseignez ici ou via variables d’environnement (voir .env.example).
+  // Tant qu’un ID est vide, le script correspondant n’est PAS injecté.
+  analytics: {
+    // Google Tag Manager — recommandé (gère GA4 + Google Ads + Meta depuis l’interface GTM)
+    gtmId: process.env.NEXT_PUBLIC_GTM_ID || "", // ex: "GTM-XXXXXXX"
+    // Google Analytics 4 (si vous n’utilisez pas GTM)
+    ga4Id: process.env.NEXT_PUBLIC_GA4_ID || "", // ex: "G-XXXXXXXXXX"
+    // Google Ads (conversion tracking direct, si pas via GTM)
+    googleAdsId: process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "", // ex: "AW-XXXXXXXXXX"
+    // Label de conversion Google Ads (clic WhatsApp / appel) — voir Analytics.tsx
+    googleAdsConversionLabel: process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL || "", // ex: "abcDEF12gh"
+    // Meta (Facebook/Instagram) Pixel
+    metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID || "", // ex: "123456789012345"
   },
 };
 
