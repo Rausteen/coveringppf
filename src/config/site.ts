@@ -5,11 +5,13 @@
 
 export const siteConfig = {
   // -------- Identity --------
-  businessName: "Covering PPF Strasbourg",
-  legalName: "Covering PPF Strasbourg",
+  // Nom affiché sur le site / Google Business. Vous pouvez le remplacer par un
+  // nom de marque distinct (ex. "Wrap67") sans toucher au domaine.
+  businessName: "PPF Strasbourg",
+  legalName: "PPF Strasbourg",
   tagline: "PPF & covering automobile premium à Strasbourg",
   // Domaine canonical — pilotable via NEXT_PUBLIC_SITE_URL (voir .env.example).
-  domain: (process.env.NEXT_PUBLIC_SITE_URL || "https://www.coveringppf-strasbourg.fr").replace(/\/$/, ""),
+  domain: (process.env.NEXT_PUBLIC_SITE_URL || "https://ppf-strasbourg.fr").replace(/\/$/, ""),
 
   // -------- Contact --------
   // Format E.164 sans espaces ni + pour WhatsApp (wa.me/<numéro>)
@@ -17,7 +19,7 @@ export const siteConfig = {
   // Numéro affiché (espacé) et tel: (E.164)
   phoneNumber: "+33 7 67 05 24 35",
   phoneNumberE164: "+33767052435",
-  email: "contact@coveringppf-strasbourg.fr",
+  email: "contact@ppf-strasbourg.fr",
 
   // -------- Localisation --------
   city: "Strasbourg",
