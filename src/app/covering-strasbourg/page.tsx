@@ -15,7 +15,7 @@ import { extractText } from "@/lib/extract-text";
 export const metadata: Metadata = {
   title: "Covering Strasbourg | Covering voiture total ou partiel",
   description:
-    "Covering automobile à Strasbourg : changement de couleur, finitions mat, satin, brillant, carbone, chrome delete. Pose premium, devis WhatsApp.",
+    "Covering automobile à Strasbourg : changement de couleur, finitions mat, satin, brillant, carbone. Pose premium, total ou partiel, devis WhatsApp.",
   alternates: { canonical: "/covering-strasbourg" },
   openGraph: {
     title: "Covering Strasbourg | Covering voiture total ou partiel",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 };
 
 const coveringFaq = HOME_FAQ.filter((f) =>
-  /covering|finition|chrome delete|couleur|réversible|peinture|partiel/i.test(f.q),
+  /covering|finition|couleur|réversible|peinture|partiel/i.test(f.q),
 );
 
 export default function CoveringPage() {
@@ -39,10 +39,10 @@ export default function CoveringPage() {
             Covering voiture à <span className="bg-gradient-to-r from-accent-soft via-accent to-accent-deep bg-clip-text text-transparent">Strasbourg</span> — total ou partiel.
           </>
         }
-        subtitle="Changez la couleur ou la finition de votre véhicule sans peinture, en conservant la possibilité de revenir à l’origine. Mat, satin, brillant, carbone, chrome delete — pose soignée, finition premium."
+        subtitle="Changez la couleur ou la finition de votre véhicule sans peinture, en conservant la possibilité de revenir à l’origine. Mat, satin, brillant, carbone — total ou partiel, pose soignée, finition premium."
         bullets={[
           "Covering total ou partiel",
-          "Finitions mat, satin, brillant, carbone, chrome",
+          "Finitions mat, satin, brillant, carbone",
           "Réversible — protège la peinture",
           "Particuliers, sportives, premium, utilitaires",
           `Atelier à ${siteConfig.city}, intervention ${siteConfig.region}`,
@@ -65,7 +65,7 @@ export default function CoveringPage() {
 
       <ServiceJsonLd
         name="Covering automobile"
-        description="Covering voiture (total ou partiel) à Strasbourg : changement de couleur, finitions mat, satin, brillant, carbone, chrome delete."
+        description="Covering voiture (total ou partiel) à Strasbourg : changement de couleur, finitions mat, satin, brillant, carbone."
         url={`${siteConfig.domain}/covering-strasbourg`}
       />
       <FaqJsonLd items={coveringFaq.map((it) => ({ q: it.q, aPlain: extractText(it.a) }))} />

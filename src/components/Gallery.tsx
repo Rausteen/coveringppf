@@ -32,11 +32,11 @@ const ITEMS: Item[] = [
     href: "/covering-strasbourg",
   },
   {
-    type: "Chrome delete",
+    type: "Covering détails",
     project: "BMW M3 Competition",
-    place: "Illkirch",
+    place: "Illkirch-Graffenstaden",
     image: "/chrome-delete.webp",
-    alt: "Chrome delete sur BMW M3 Competition — finition noir satiné",
+    alt: "Covering partiel des détails de carrosserie (contours de vitres, rétroviseurs) sur BMW M3 Competition à Illkirch-Graffenstaden",
     href: "/covering-strasbourg",
   },
   {

@@ -44,7 +44,7 @@ const CHOOSE_PPF = [
 
 const CHOOSE_COVERING = [
   "Vous voulez changer la couleur ou la finition de votre voiture",
-  "Vous voulez un look mat, satin, carbone ou chrome delete",
+  "Vous voulez un look mat, satin, carbone ou brillant",
   "Vous voulez tester un look sans engagement (réversible)",
   "Vous voulez transformer un utilitaire en outil de communication",
   "Vous cherchez à personnaliser sans repeindre",

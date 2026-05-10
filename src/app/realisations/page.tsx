@@ -9,7 +9,7 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "Réalisations PPF, covering & marquage à Strasbourg",
   description:
-    "Galerie de réalisations PPF, covering, chrome delete et marquage publicitaire véhicule à Strasbourg et alentours.",
+    "Galerie de réalisations PPF, covering et marquage publicitaire véhicule à Strasbourg et alentours.",
   alternates: { canonical: "/realisations" },
 };
 

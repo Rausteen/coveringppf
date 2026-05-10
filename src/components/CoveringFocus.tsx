@@ -7,7 +7,7 @@ const FINISHES = [
   { t: "Satiné", d: "Entre mat et brillant, élégant et discret." },
   { t: "Brillant", d: "Couleur saturée, effet peinture neuve." },
   { t: "Carbone", d: "Texture sportive, idéal pièces ciblées." },
-  { t: "Chrome / métallisé", d: "Finitions premium, rendu profond." },
+  { t: "Métallisé / brossé", d: "Finitions premium, rendu profond." },
   { t: "Couleur sur-mesure", d: "Avery, 3M, Hexis, KPMF — large palette." },
 ];
 
@@ -16,7 +16,7 @@ const PARTIALS = [
   "Capot mat ou carbone",
   "Rétroviseurs",
   "Bandes sportives",
-  "Chrome delete (suppression chromes)",
+  "Hayon & coffre",
   "Calandre, jantes, badges",
 ];
 

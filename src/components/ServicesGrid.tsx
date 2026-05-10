@@ -40,7 +40,7 @@ export function ServicesGrid() {
               intro="Changez la couleur ou la finition de votre véhicule sans peinture. Réversible, premium, personnalisé."
               bullets={[
                 "Changer la couleur sans peinture",
-                "Mat, satiné, brillant, carbone, chrome delete",
+                "Mat, satiné, brillant, carbone",
                 "Réversible — protège légèrement la peinture",
                 "Total covering ou covering partiel",
               ]}

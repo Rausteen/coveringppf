@@ -52,12 +52,12 @@ const reviews: Review[] = [
   {
     name: "Lucas H.",
     vehicle: "BMW M3 Competition",
-    service: "Chrome delete intégral",
+    service: "Covering capot carbone + toit noir",
     city: "Illkirch-Graffenstaden",
     rating: 5,
     date: "Il y a 5 semaines",
     text:
-      "Chrome delete au top sur ma M3. Les contours de vitres et les jonctions sont parfaits. Le rendu satin noir donne tout de suite un autre caractère à la voiture. Pose rapide, pas de mauvaise surprise.",
+      "Capot en carbone et toit noir mat sur ma M3. Les jonctions sont parfaites, aucun pli, et le rendu donne tout de suite un autre caractère à la voiture. Pose rapide, devis tenu, pas de mauvaise surprise.",
   },
   {
     name: "Sophie M.",
@@ -77,7 +77,7 @@ const reviews: Review[] = [
     rating: 5,
     date: "Il y a 1 mois",
     text:
-      "Le contraste blanc/toit noir donne une vraie nouvelle gueule à ma Classe A. Devis transparent, rendez-vous respecté, aucun détail négligé. Je reviendrai pour le chrome delete.",
+      "Le contraste blanc/toit noir donne une vraie nouvelle gueule à ma Classe A. Devis transparent, rendez-vous respecté, aucun détail négligé. Je reviendrai pour le capot en carbone.",
   },
 ];
 

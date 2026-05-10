@@ -32,7 +32,7 @@ const FACTORS = [
   },
   {
     t: "Total ou partiel",
-    d: "Covering total (changement de couleur intégral) vs partiel (toit noir, capot, rétros, chrome delete, bandes sportives). Le partiel est très rentable pour un effet fort.",
+    d: "Covering total (changement de couleur intégral) vs partiel (toit noir, capot, rétros, bandes sportives). Le partiel est très rentable pour un effet fort.",
   },
   {
     t: "La finition choisie",
@@ -51,7 +51,7 @@ const FACTORS = [
 const PERIMETERS = [
   {
     t: "Covering partiel — accents",
-    d: "Toit noir, capot mat, rétroviseurs, chrome delete, bandes sportives. Effet fort, budget contenu, idéal pour démarrer.",
+    d: "Toit noir, capot mat, rétroviseurs, bandes sportives, hayon. Effet fort, budget contenu, idéal pour démarrer.",
   },
   {
     t: "Covering partiel — étendu",

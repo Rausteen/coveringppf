@@ -57,7 +57,7 @@ export const HOME_FAQ: FAQItem[] = [
     q: `Combien coûte un covering voiture à ${siteConfig.city} ?`,
     a: (
       <>
-        Un covering dépend de la taille du véhicule, du film (mat, satin, brillant, carbone, chrome delete…) et du niveau de finition souhaité (total ou partiel). Envoyez-nous votre véhicule sur WhatsApp pour un devis transparent.
+        Un covering dépend de la taille du véhicule, du film (mat, satin, brillant, carbone…) et du niveau de finition souhaité (total ou partiel). Envoyez-nous votre véhicule sur WhatsApp pour un devis transparent.
       </>
     ),
   },
@@ -89,7 +89,7 @@ export const HOME_FAQ: FAQItem[] = [
     q: "Covering total ou covering partiel : que choisir ?",
     a: (
       <>
-        Le covering total transforme l’ensemble du véhicule. Le partiel cible un élément (toit, capot, rétros, chrome delete, bandes sportives) pour un effet fort sans engager le budget d’un covering complet.
+        Le covering total transforme l’ensemble du véhicule. Le partiel cible un élément (toit, capot, rétros, bandes sportives) pour un effet fort sans engager le budget d’un covering complet.
       </>
     ),
   },
