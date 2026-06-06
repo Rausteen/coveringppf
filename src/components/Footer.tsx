@@ -83,7 +83,20 @@ export function Footer() {
       <div className="border-t border-white/5">
         <div className="container-edge flex flex-col items-start justify-between gap-3 py-6 text-xs text-white/45 sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} {siteConfig.legalName}. Tous droits réservés.</p>
-          <p>PPF · Covering · Marquage publicitaire · {siteConfig.city} · {siteConfig.region}</p>
+          <p className="order-3 sm:order-2">PPF · Covering · Marquage publicitaire · {siteConfig.city} · {siteConfig.region}</p>
+          <Link
+            href="https://naviel.fr"
+            target="_blank"
+            rel="noopener"
+            className="order-2 inline-flex items-center gap-1.5 text-white/55 transition-colors hover:text-white sm:order-3"
+          >
+            <span
+              aria-hidden="true"
+              className="inline-block h-[7px] w-[7px] rotate-45 bg-[#c8f24e]"
+              style={{ borderRadius: "1px" }}
+            />
+            <span className="font-medium">Réalisé par Naviel</span>
+          </Link>
         </div>
       </div>
     </footer>
